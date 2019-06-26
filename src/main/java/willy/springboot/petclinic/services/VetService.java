@@ -1,14 +1,9 @@
 package willy.springboot.petclinic.services;
 
+import org.springframework.data.repository.CrudRepository;
 import willy.springboot.petclinic.model.Vet;
 
-import java.util.Set;
 
-public interface VetService {
+public interface VetService extends CrudRepository<Vet, Long> {
 
-    Vet findById(Long id);
-
-    Vet save(Vet owner);
-
-    Set<Vet> findAll();
 }
